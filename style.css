@@ -1,0 +1,178 @@
+/* =====================================================
+   COMP208 simplified palette.css
+   Purpose: Light blue, dark blue, beige, black, consistent accents
+   ===================================================== */
+
+/* ---------- 1) CSS Reset / Base ----------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+html, body { margin: 0; padding: 0; }
+img { max-width: 100%; height: auto; display: block; }
+
+/* ---------- 2) Core Theme Tokens ----------- */
+:root {
+  /* Brand Colors */
+  --primary: #1B3A57;        /* Dark blue for headers/nav */
+  --secondary: #D8D3C0;      /* Beige background */
+  --accent: #3A6EA5;         /* Medium blue for button hover/highlights */
+  --light: #D0E6FF;          /* Light blue for boxes/cards */
+  --head: #000000;            /* Black for headings */
+  --text: #2E2E2E;            /* Body text */
+  --muted: #666666;           /* Secondary text */
+
+  /* Borders & Shadows */
+  --radius: 10px;
+  --shadow: 0 6px 15px rgba(0,0,0,0.08);
+
+  /* Layout & Spacing */
+  --spacing: 16px;
+  --maxw: 1100px;
+
+  /* Typography */
+  --font-body: Calibri, Arial, sans-serif;
+  --font-head: Calibri, Arial, sans-serif;
+}
+
+/* ---------- 3) Page Defaults --------------- */
+body {
+  background: var(--secondary);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+main { width: min(100% - 2*var(--spacing), var(--maxw)); margin: 32px auto; }
+h1, h2, h3 { font-family: var(--font-head); line-height: 1; margin: 0 0 0.6em; color: var(--head); }
+
+/* ---------- Typography Enhancements -------- */
+p { margin: 0 0 1em; font-size: 0.95rem; }
+small { color: var(--muted); }
+
+/* ---------- Links & Hover Effects --------- */
+a {
+  color: var(--primary);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.2s;
+}
+a:hover, a:focus { color: var(--accent); }
+a::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s;
+}
+a:hover::after { width: 100%; }
+
+/* ---------- Header / Navigation --------- */
+header {
+  background: var(--primary);
+  color: white;
+  padding: 20px 0;
+  box-shadow: var(--shadow);
+}
+header h1 { 
+  margin: 0 auto; 
+  text-align: center; 
+  font-size: 2.2rem; 
+  color: var(--head);
+}
+nav {
+  background: var(--primary);
+  font-size: 0.95rem;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 0; padding: 0;
+}
+nav a {
+  padding: 12px 20px;
+  border-radius: var(--radius);
+  transition: background 0.25s;
+  color: white;
+}
+nav a:hover { background: var(--accent); }
+.active { background: var(--accent); color: white; }
+
+/* ---------- Sections & Cards --------- */
+.section, section {
+  background: var(--light); /* light blue boxes */
+  border-radius: var(--radius);
+  padding: calc(var(--spacing) * 1.5);
+  margin: 20px 0;
+  box-shadow: var(--shadow);
+}
+.section:hover, section:hover { transform: none; box-shadow: var(--shadow); }
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--spacing);
+}
+.card {
+  background: var(--light);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.card img { width: 100%; border-bottom: 1px solid #eee; }
+.card .content { padding: var(--spacing); }
+.card h3 { color: var(--primary); margin-top: 0.5em; }
+
+/* ---------- Buttons & Forms --------- */
+/* ---------- Buttons & Forms --------- */
+button, input[type="submit"] {
+  background: var(--primary);    /* dark blue */
+  color: white;                  /* always white text */
+  border: none;
+  padding: 10px 18px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.25s;
+}
+
+button:hover, input[type="submit"]:hover {
+  background: #033b74;           /* slightly darker medium blue */
+  color: rgb(0, 0, 0);                  /* ensure text remains readable */
+}
+
+
+/* ---------- Footer --------- */
+/* ---------- Footer --------- */
+footer {
+  padding: 24px 0;
+  background: #1B3A57;  /* black background */
+  color: rgb(0, 0, 0);         /* keep text white for contrast */
+  text-align: center;
+}
+footer p { margin: 0; }
+
+
+/* ---------- Utilities --------- */
+.text-center { text-align: center; }
+.img-center { display: block; margin: 0 auto; max-width: 100%; border-radius: var(--radius); }
+.m-0 { margin: 0 !important; }
+.mt-1 { margin-top: 8px !important; }
+.mt-2 { margin-top: 16px !important; }
+.mt-3 { margin-top: 24px !important; }
+.p-1 { padding: 8px !important; }
+.p-2 { padding: 16px !important; }
+.p-3 { padding: 24px !important; }
+
+/* ---------- Image Grid --------- */
+.image-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: var(--spacing); padding: var(--spacing); }
+.image-grid img { border-radius: var(--radius); box-shadow: var(--shadow); transition: transform 0.25s; }
+.image-grid img:hover { transform: scale(1.03); }
+
+/* ---------- Tables --------- */
+table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+th, td { border: 1px solid #ccc; padding: 10px 12px; text-align: left; }
+thead { background: var(--primary); color: white; }
+tr:nth-child(even) { background: #f9f9f9; }

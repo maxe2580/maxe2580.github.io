@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max's Teaching Portfolio - Contact Me</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- This is the header section for my page, in line with Semantic HTML -->
+    <header>
+        <h1>Contact Me</h1>
+    </header>
+    <!-- Navigation menu section -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="teaching.html">Teaching Practice</a></li>
+                <li><a href="worksamples.html">Samples of Work</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- This is the main content area for my page, in line with Semantic HTML -->
+    <main>
+        <!-- This is the section for the Contact Form -->
+        <section class="section">
+            <div class="container">
+                <h2>Get in touch</h2>
+                <form id="contact-form" action="https://formsubmit.co/bd6eddb76e8bb432e7bf7e6be3fec2f7" method="post" autocomplete="on">
+                    <fieldset>
+                        <legend>Your details</legend>
+                        <!-- Form text input for Full Name -->
+                        <label for="name">Full name</label>
+                        <input id="name" name="name" type="text" placeholder="Max Einspinner" required minlength="6" autocomplete="name">
+                        <!-- Form text input for Email address -->
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" placeholder="name@example.com" required autocomplete="email">
+                        <!-- Form text input for Message -->
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="How can I help?" required minlength="8"></textarea>
+                        <!-- honeypot anti-spam field -->
+                        <input type="text" name="honey" tabindex="-1" aria-hidden="true" style="position:absolute;left:-9999px;"> 
+                        <!-- button tag used for input, in line with Semantic HTML-->
+                        <button type="submit">Send</button>
+                    </fieldset>
+                </form>
+                <!-- inline status message for once form submitted -->
+                <p id="form-status" role="status" aria-live="polite" hidden></p>
+            </div>
+        </section>
+        <!-- This is the section for links to socials -->
+        <section class="section" aria-labelledby="socials">
+            <h2 id="socials">Add me on Socials</h2>
+            <ul>
+                <li><a href="https://au.linkedin.com/" rel="noopener">LinkedIn</a></li>
+                <!-- Add other socials here -->
+            </ul>
+        </section>
+    </main>
+    <!-- This is the footer section for my page, in line with Semantic HTML -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Max Einspinner. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+

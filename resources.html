@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Metadata for character encoding and responsiveness -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Page title shown in browser tab -->
+  <title>Max's Teaching Portfolio</title>
+
+  <!-- External stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Internal CSS styles (grid and figure formatting) -->
+  <style>
+    /* Grid layout for image-based sections */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    /* Center content inside each figure */
+    figure {
+      text-align: center;
+    }
+
+    /* Style for images inside figures */
+    figure img {
+      border-radius: 8px; /* rounded corners */
+      max-width: 100%; /* responsive scaling */
+      height: auto; 
+      box-shadow: 0px 2px 6px rgba(0,0,0,0.2); /* subtle shadow */
+    }
+
+    /* Captions under images */
+    figcaption {
+      margin-top: 8px;
+      font-size: 0.9rem;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <!-- Main header with site title -->
+  <header> 
+    <h1>Max's Teaching Portfolio</h1>
+  </header>   
+
+  <!-- Navigation menu -->
+  <nav>
+    <div class="container">
+      <ul>
+        <!-- Navigation links to different sections of the portfolio -->
+                <li><a href="index.html">Home</a></li>
+                <li><a href="teaching.html">Teaching Practice</a></li>
+                <li><a href="worksamples.html">Samples of Work</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main content area -->
+  <main>
+    <!-- Section: Stage 6 Timber Resources -->
+    <section class="section">
+      <h2>Stage 6 Timber Resources</h2>
+
+      <!-- Inspiration links -->
+      <h3>Major Work Inspiration</h3>
+      <ul>
+        <!-- Each link opens in a new tab (target="_blank") and uses rel="noopener" for security -->
+        <li><a href="https://www.woodreview.com.au/student-awards" target="_blank" rel="noopener">Wood Review Student Awards</a></li>
+        <li><a href="http://www.woodreview.com.au/studio-furniture" target="_blank" rel="noopener">Australian Furniture Designers/Makers</a></li>
+        <li><a href="https://www.elliotbastianon.com" target="_blank" rel="noopener">Elliot Bastianon</a></li>
+        <li><a href="http://cenzo.net.au/" target="_blank" rel="noopener">Cenzo</a></li>
+        <li><a href="http://www.bernchandleyfurniture.com" target="_blank" rel="noopener">Bern Chandley Furniture</a></li>
+        <li><a href="https://chelsealemon.com.au" target="_blank" rel="noopener">Chelsea Lemon</a></li>
+        <li><a href="https://www.antongerner.com/" target="_blank" rel="noopener">Anton Gerner</a></li>
+        <li><a href="https://www.luckensmeyer.com.au" target="_blank" rel="noopener">Luckensmeyer</a></li>
+        <li><a href="https://www.markowitzdesign.com" target="_blank" rel="noopener">Markowitz Design</a></li>
+      </ul>
+
+      <!-- Portfolio examples displayed in a grid -->
+      <h3>Portfolio Examples</h3>
+      <div class="grid">
+        <!-- Example folio (Quinn) -->
+        <figure>
+          <a href="docs/Example folio-Quinn.pdf" download="example-folio-quinn.pdf" aria-label="Download Quinn folio PDF">
+            <img src="images/quinn folio.png" alt="Thumbnail of Quinn folio PDF" loading="lazy">
+          </a>
+          <figcaption>Download <strong>Quinn Folio</strong> (PDF)</figcaption>
+        </figure>
+
+        <!-- Example folio (Max) -->
+        <figure>
+          <a href="docs/Major work folio 22.pdf" download="major-work-folio.pdf" aria-label="Download Max Einspinner major work PDF">
+            <img src="images/einspinner folio.png" alt="Thumbnail of Max Einspinner major work PDF" loading="lazy">
+          </a>
+          <figcaption>Download <strong>Max Einspinner Major Work</strong> (PDF)</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Section: Revision Resources -->
+    <section class="section">
+      <h2>Revision Resources</h2>
+
+      <!-- Grid of exam and study resources -->
+      <div class="grid">
+        <!-- Example resource: 2022 HSC Exam -->
+        <figure>
+          <a href="docs/2022-hsc-indus-tech-timber.pdf" download="2022-HSC.pdf" aria-label="Download 2022 HSC exam PDF">
+            <img src="images/2022 hsc.png" alt="Thumbnail of 2022 HSC exam PDF" loading="lazy">
+          </a>
+          <figcaption>Download <strong>2022 HSC Exam</strong> (PDF)</figcaption>
+        </figure>
+
+        <!-- Example resource: 2024 HSC Exam -->
+        <figure>
+          <a href="docs/2024-hsc-indus-tech-timber.pdf" download="2024-HSC.pdf" aria-label="Download 2024 HSC exam PDF">
+            <img src="images/2024 hsc.png" alt="Thumbnail of 2024 HSC exam PDF" loading="lazy">
+          </a>
+          <figcaption>Download <strong>2024 HSC Exam</strong> (PDF)</figcaption>
+        </figure>
+
+        <!-- Example resource: Timber Notes -->
+        <figure>
+          <a href="docs/2023 Prelim and HSC ITW Theory Notes (1).pdf" download="open-book-notes.pdf" aria-label="Download theory notes PDF">
+            <img src="images/timber notes.png" alt="Thumbnail of timber notes PDF" loading="lazy">
+          </a>
+          <figcaption>Download <strong>Prelim & HSC ITW Notes</strong> (PDF)</figcaption>
+        </figure>
+
+        <!-- Example resource: Case Study -->
+        <figure>
+          <a href="docs/Homestead Kitchens Case Study - Copy.pdf" download="case-study.pdf" aria-label="Download case study PDF">
+            <img src="images/homestead kitchens.png" alt="Thumbnail of Homestead Kitchens case study PDF" loading="lazy">
+          </a>
+          <figcaption>Download <strong>Homestead Kitchens Case Study</strong> (PDF)</figcaption>
+        </figure>
+      </div>
+
+      <!-- Textbook resources displayed in another grid -->
+      <h3>Textbooks</h3>
+      <div class="grid">
+        <!-- Cabinetmaking textbook -->
+        <figure>
+          <a href="docs/The Art Of Woodworking - Cabinetmaking - Reduced.pdf" download="cabinetmaking.pdf" aria-label="Download Cabinetmaking PDF">
+            <img src="images/art of cabinet making.png" alt="Thumbnail of Cabinetmaking book" loading="lazy">
+          </a>
+          <figcaption>Download <strong>The Art of Woodworking - Cabinetmaking</strong> (PDF)</figcaption>
+        </figure>
+
+        <!-- Tables and Desks textbook -->
+        <figure>
+          <a href="docs/The Art Of Woodworking - Tables And Desks - Reduced.pdf" download="tables-desks.pdf" aria-label="Download Tables and Desks PDF">
+            <img src="images/Art of tables and desks.png" alt="Thumbnail of Tables and Desks book" loading="lazy">
+          </a>
+          <figcaption>Download <strong>The Art of Woodworking - Tables & Desks</strong> (PDF)</figcaption>
+        </figure>
+
+        <!-- Stage 6 Design & Tech textbook -->
+        <figure>
+          <a href="docs/DesignTech Stage 6 Full.pdf" download="designtech-stage6.pdf" aria-label="Download Design & Tech textbook PDF">
+            <img src="images/stage 6 design and tech textbook.png" alt="Thumbnail of Stage 6 Design & Tech book" loading="lazy">
+          </a>
+          <figcaption>Download <strong>DesignTech Stage 6</strong> (PDF)</figcaption>
+        </figure>
+
+        <!-- Woodworking Part One textbook -->
+        <figure>
+          <a href="docs/Woodworking Part One 3rd Edition.pdf" download="woodworking-part1.pdf" aria-label="Download Woodworking Part One PDF">
+            <img src="images/woodworking part 1.png" alt="Thumbnail of Woodworking Part One book" loading="lazy">
+          </a>
+          <figcaption>Download <strong>Woodworking Part One</strong> (PDF)</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+      <footer>
+        <div class="container">
+            <p>&copy; 2025 Max Einspinner. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

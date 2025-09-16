@@ -1,0 +1,75 @@
+<link rel="stylesheet" href="style.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max's Teaching Portfolio</title>
+</head>
+<body>
+    <!-- Main heading -->
+    <header> 
+        <h1>Max's Teaching Portfolio</h1>
+    </header>   
+
+    <!-- Navigation menu -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="teaching.html">Teaching Practice</a></li>
+                <li><a href="worksamples.html">Samples of Work</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+  <!-- Section: Download Resume -->
+  <section class="section">
+    <!-- Section heading -->
+    <h2>Download Resume</h2>
+    
+    <!-- Introductory paragraph -->
+    <p>This document outlines my professional and teaching experience to date:</p>
+
+    <!-- Figure element groups the image (thumbnail) and its caption -->
+    <figure>
+      <!-- 
+        Anchor (<a>) wraps the image so that clicking the image downloads the PDF.
+        href="docs/resume_placeholder.pdf" -> points to the PDF file location
+        download="resume_placeholder.pdf" -> instructs browser to download, renaming the file
+        aria-label -> improves accessibility for screen readers
+      -->
+      <a href="docs/resume_placeholder.pdf" download="resume_placeholder.pdf" aria-label="Download Resume PDF">
+        <!-- 
+          Image thumbnail representing the resume
+          src -> path to image
+          alt -> descriptive text for accessibility and SEO
+          width -> sets image width in pixels
+          loading="lazy" -> defers loading until the image is near the viewport for faster page load
+        -->
+        <img src="images/Screenshot 2025-09-16 141036.png" 
+             alt="Thumbnail of resume" 
+             width="300" 
+             loading="lazy">
+      </a>
+
+      <!-- 
+        Caption under the image
+        <figcaption> explains what the figure is about
+      -->
+      <figcaption>Download <strong>Resume</strong> (PDF)</figcaption>
+    </figure>
+  </section>
+</main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Max Einspinner. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+
