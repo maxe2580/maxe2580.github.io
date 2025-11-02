@@ -1468,511 +1468,470 @@ input, select, textarea {
 		table.default thead {
 			border-bottom: solid 2px #f4f4f4;
 		}
+/* Form Styling*/
 
-/* Form */
+form label {
+	display: block;
+	font-weight: 400;
+	color: #363636;
+	margin: 0 0 1em 0;
+}
 
-	form label {
-		display: block;
-		font-weight: 400;
-		color: #363636;
+/* Base input styles */
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form select,
+form textarea {
+	-webkit-appearance: none;
+	border: 0;
+	background: #f4f4f4;
+	padding: 0.75em;
+	width: 100%;
+	transition: background-color 0.25s ease-in-out;
+}
+
+/* Focus state */
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="password"]:focus,
+form select:focus,
+form textarea:focus {
+	background: #f8f8f8;
+}
+
+/* Adjusted line height for certain inputs */
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form select {
+	line-height: 1.35em;
+}
+
+/* Placeholder text styling */
+form ::-webkit-input-placeholder,
+form :-moz-placeholder,
+form ::-moz-placeholder,
+form :-ms-input-placeholder {
+	color: #999;
+}
+
+/* Section and Article Styling*/
+
+section, article {
+	margin-bottom: 3em;
+}
+
+/* Remove bottom margin from last child */
+section > :last-child,
+section:last-child,
+article > :last-child,
+article:last-child {
+	margin-bottom: 0;
+}
+
+/* Section headers */
+header {
+	margin: 0 0 1.5em 0;
+}
+
+header > p {
+	margin: 0.5em 0 0 0;
+	color: #aaa;
+}
+
+@media screen and (max-width: 736px) {
+	header {
 		margin: 0 0 1em 0;
 	}
+}
 
-	form input[type="text"],
-	form input[type="email"],
-	form input[type="password"],
-	form select,
-	form textarea {
-		-webkit-appearance: none;
-		border: 0;
-		background: #f4f4f4;
-		padding: 0.75em;
-		width: 100%;
-		-moz-transition: background-color .25s ease-in-out;
-		-webkit-transition: background-color .25s ease-in-out;
-		-ms-transition: background-color .25s ease-in-out;
-		transition: background-color .25s ease-in-out;
-	}
+/* Image Styling */
 
-		form input[type="text"]:focus,
-		form input[type="email"]:focus,
-		form input[type="password"]:focus,
-		form select:focus,
-		form textarea:focus {
-			background: #f8f8f8;
-		}
+.image {
+	display: inline-block;
+}
 
-	form input[type="text"],
-	form input[type="email"],
-	form input[type="password"],
-	form select {
-		line-height: 1.35em;
-	}
+.image img {
+	display: block;
+	width: 100%;
+}
 
-	form ::-webkit-input-placeholder {
-		color: #999;
-	}
+.image.fit,
+.image.featured {
+	display: block;
+	width: 100%;
+}
 
-	form :-moz-placeholder {
-		color: #999;
-	}
+.image.featured {
+	margin: 0 0 2em 0;
+}
 
-	form ::-moz-placeholder {
-		color: #999;
-	}
+.image.left {
+	float: left;
+	margin: 0 2em 2em 0;
+}
 
-	form :-ms-input-placeholder {
-		color: #999;
-	}
+.image.centered {
+	display: block;
+	margin: 0 0 2em 0;
+}
 
-/* Section/Article */
+.image.centered img {
+	margin: 0 auto;
+	width: auto;
+}
 
-	section, article {
-		margin-bottom: 3em;
-	}
+/* Button Styles */
 
-		section > :last-child, section:last-child, article > :last-child, article:last-child {
-			margin-bottom: 0;
-		}
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+button,
+.button {
+	display: inline-block;
+	background-color: #222222;
+	color: #ffffff;
+	border: 0;
+	cursor: pointer;
+	outline: 0;
+	padding: 0.7em 1.5em;
+	-webkit-appearance: none;
+	transition: background-color 0.25s ease-in-out;
+}
 
-	header {
-		margin: 0 0 1.5em 0;
-	}
+/* Button hover */
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+button:hover,
+.button:hover {
+	background-color: #333333;
+}
 
-		header > p {
-			margin: 0.5em 0 0 0;
-			color: #aaa;
-		}
+/* Button active */
+input[type="button"]:active,
+input[type="submit"]:active,
+input[type="reset"]:active,
+button:active,
+.button:active {
+	background-color: #444444;
+}
 
-		@media screen and (max-width: 736px) {
+/* Alt button styles */
+input[type="button"].alt,
+input[type="submit"].alt,
+input[type="reset"].alt,
+button.alt,
+.button.alt {
+	background-color: #777777;
+}
 
-			header {
-				margin: 0 0 1em 0;
-			}
+input[type="button"].alt:hover,
+input[type="submit"].alt:hover,
+input[type="reset"].alt:hover,
+button.alt:hover,
+.button.alt:hover {
+	background-color: #888888;
+}
 
-		}
+input[type="button"].alt:active,
+input[type="submit"].alt:active,
+input[type="reset"].alt:active,
+button.alt:active,
+.button.alt:active {
+	background-color: #999999;
+}
 
-/* Image */
+/* Button sizing variants */
+input[type="button"].small,
+input[type="submit"].small,
+input[type="reset"].small,
+button.small,
+.button.small {
+	font-size: 0.75em;
+}
 
-	.image {
-		display: inline-block;
-	}
+input[type="button"].large,
+input[type="submit"].large,
+input[type="reset"].large,
+button.large,
+.button.large {
+	font-size: 1.25em;
+	padding: 0.5em 1.25em;
+}
 
-		.image img {
-			display: block;
-			width: 100%;
-		}
+input[type="button"].xlarge,
+input[type="submit"].xlarge,
+input[type="reset"].xlarge,
+button.xlarge,
+.button.xlarge {
+	font-size: 1.5em;
+	padding: 0.5em 1.25em;
+}
 
-		.image.fit {
-			display: block;
-			width: 100%;
-		}
-
-		.image.featured {
-			display: block;
-			width: 100%;
-			margin: 0 0 2em 0;
-		}
-
-		.image.left {
-			float: left;
-			margin: 0 2em 2em 0;
-		}
-
-		.image.centered {
-			display: block;
-			margin: 0 0 2em 0;
-		}
-
-			.image.centered img {
-				margin: 0 auto;
-				width: auto;
-			}
-
-/* Button */
-
+@media screen and (max-width: 736px) {
 	input[type="button"],
 	input[type="submit"],
 	input[type="reset"],
 	button,
 	.button {
-		-moz-transition: background-color .25s ease-in-out;
-		-webkit-transition: background-color .25s ease-in-out;
-		-ms-transition: background-color .25s ease-in-out;
-		transition: background-color .25s ease-in-out;
-		-webkit-appearance: none;
-		display: inline-block;
-		background-color: #222222;
-		color: #ffffff;
-		border: 0;
-		cursor: pointer;
-		outline: 0;
-		padding: 0.7em 1.5em 0.7em 1.5em;
+		width: 100%;
+	}
+}
+
+/*  Lists */
+
+/* Unordered list */
+ul {
+	list-style: disc;
+	padding-left: 1em;
+}
+
+ul li {
+	padding-left: 0.5em;
+}
+
+/* Ordered list */
+ol {
+	list-style: decimal;
+	padding-left: 1.25em;
+}
+
+ol li {
+	padding-left: 0.25em;
+}
+
+/* Actions list */
+ul.actions {
+	list-style: none;
+	padding-left: 0;
+}
+
+ul.actions li {
+	display: inline-block;
+	padding-left: 0;
+	margin: 0 0 0 0.5em;
+}
+
+ul.actions li:first-child {
+	margin-left: 0;
+}
+
+@media screen and (max-width: 736px) {
+	ul.actions li {
+		display: block;
+		margin: 0.75em 0 0 0;
 	}
 
-		input[type="button"]:hover,
-		input[type="submit"]:hover,
-		input[type="reset"]:hover,
-		button:hover,
-		.button:hover {
-			background-color: #333333;
-		}
-
-		input[type="button"]:active,
-		input[type="submit"]:active,
-		input[type="reset"]:active,
-		button:active,
-		.button:active {
-			background-color: #444444;
-		}
-
-		input[type="button"].alt,
-		input[type="submit"].alt,
-		input[type="reset"].alt,
-		button.alt,
-		.button.alt {
-			background-color: #777777;
-		}
-
-			input[type="button"].alt:hover,
-			input[type="submit"].alt:hover,
-			input[type="reset"].alt:hover,
-			button.alt:hover,
-			.button.alt:hover {
-				background-color: #888888;
-			}
-
-			input[type="button"].alt:active,
-			input[type="submit"].alt:active,
-			input[type="reset"].alt:active,
-			button.alt:active,
-			.button.alt:active {
-				background-color: #999999;
-			}
-
-		input[type="button"].small,
-		input[type="submit"].small,
-		input[type="reset"].small,
-		button.small,
-		.button.small {
-			font-size: 0.75em;
-		}
-
-		input[type="button"].large,
-		input[type="submit"].large,
-		input[type="reset"].large,
-		button.large,
-		.button.large {
-			font-size: 1.25em;
-			padding: 0.5em 1.25em 0.5em 1.25em;
-		}
-
-		input[type="button"].xlarge,
-		input[type="submit"].xlarge,
-		input[type="reset"].xlarge,
-		button.xlarge,
-		.button.xlarge {
-			font-size: 1.5em;
-			padding: 0.5em 1.25em 0.5em 1.25em;
-		}
-
-		@media screen and (max-width: 736px) {
-
-			input[type="button"],
-			input[type="submit"],
-			input[type="reset"],
-			button,
-			.button {
-				width: 100%;
-			}
-
-		}
-
-/* List */
-
-	ul {
-		list-style: disc;
-		padding-left: 1em;
+	ul.actions li:first-child {
+		margin-top: 0;
 	}
+}
 
-		ul li {
-			padding-left: 0.5em;
-		}
+/* Icon Font Styling*/
 
-	ol {
-		list-style: decimal;
-		padding-left: 1.25em;
+.icon {
+	text-decoration: none;
+	position: relative;
+}
+
+.icon:before {
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 400;
+	display: inline-block;
+	line-height: 1;
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	text-transform: none !important;
+}
+
+.icon.solid:before {
+	font-weight: 900;
+}
+
+.icon.brands:before {
+	font-family: 'Font Awesome 5 Brands';
+}
+
+.icon:before {
+	line-height: inherit;
+}
+
+.icon > .label {
+	display: none;
+}
+
+/* Navigation Bar */
+
+#nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	height: 4.5em;
+	background: transparent;
+	cursor: default;
+	position: relative;
+	z-index: 50;
+	margin-bottom: -0.2em;
+	padding: 0;
+}
+
+/* Active nav item */
+#nav a.active {
+	opacity: 1;
+	color: #fff;
+	text-shadow: 0 0 8px rgba(255, 255, 255, 0.9), 0 0 15px rgba(255, 200, 100, 0.7);
+}
+
+/* Nav icon links */
+#nav a {
+	position: relative;
+	display: inline-block;
+	color: #ffffff;
+	width: 1em;
+	height: 1em;
+	line-height: 0.9em;
+	font-size: 2.4em;
+	margin: 0 0.6em;
+	opacity: 0.45;
+	transition: opacity 0.25s ease-in-out, transform 0.2s ease-in-out;
+}
+
+#nav a.icon:before {
+	padding-right: 0;
+}
+
+#nav a:hover {
+	opacity: 1;
+	transform: scale(1.1);
+}
+
+#nav a.active {
+	opacity: 1;
+}
+
+/* Tooltip labels */
+#nav a span {
+	display: block;
+	position: absolute;
+	background: rgba(20, 20, 20, 0.9);
+	color: #ffffff;
+	top: -2.75em;
+	font-size: 0.3em;
+	height: 2.25em;
+	line-height: 2.25em;
+	left: 50%;
+	opacity: 0;
+	width: 5.5em;
+	margin-left: -2.75em;
+	border-radius: 4px;
+	transition: opacity 0.25s ease-in-out;
+}
+
+#nav a:hover span {
+	opacity: 1;
+}
+
+/* Heading text override */
+strong, b, h1, h2, h3, h4, h5, h6 {
+	color: #ffffff;
+}
+
+/* Active page underline adjustments */
+#nav a[href="#home"].active:after {
+	bottom: -3em;
+}
+
+#nav a[href="#about"].active:after,
+#nav a[href="#teaching-practice"].active:after,
+#nav a[href="#resources"].active:after,
+#nav a[href="#my-work"].active:after,
+#nav a[href="#resume"].active:after,
+#nav a[href="#contact"].active:after {
+	bottom: -3.4em;
+}
+
+/* Hide nav tooltips on small screens */
+@media screen and (max-width: 980px) {
+	#nav a span {
+		display: none;
 	}
+}
 
-		ol li {
-			padding-left: 0.25em;
-		}
+/*   Wrapper
+ */
 
-/* Actions */
+#wrapper {
+	width: 45em;
+	margin: 0 auto;
+	min-height: 100vh;
+	max-width: 100%;
+	padding: 4em 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	transition: opacity 1s ease-in-out;
+}
 
-	ul.actions {
-		list-style: none;
-		padding-left: 0;
-	}
+body.is-preload #wrapper {
+	opacity: 0;
+}
 
-		ul.actions li {
-			display: inline-block;
-			padding-left: 0;
-			margin: 0 0 0 0.5em;
-		}
-
-			ul.actions li:first-child {
-				margin-left: 0;
-			}
-
-		@media screen and (max-width: 736px) {
-
-			ul.actions li {
-				display: block;
-				margin: 0.75em 0 0 0;
-			}
-
-				ul.actions li:first-child {
-					margin-top: 0;
-				}
-
-		}
-
-/* Icons */
-
-	.icon {
-		text-decoration: none;
-		position: relative;
-		text-decoration: none;
-	}
-
-		.icon:before {
-			-moz-osx-font-smoothing: grayscale;
-			-webkit-font-smoothing: antialiased;
-			display: inline-block;
-			font-style: normal;
-			font-variant: normal;
-			text-rendering: auto;
-			line-height: 1;
-			text-transform: none !important;
-			font-family: 'Font Awesome 5 Free';
-			font-weight: 400;
-		}
-
-		.icon.solid:before {
-			font-weight: 900;
-		}
-
-		.icon.brands:before {
-			font-family: 'Font Awesome 5 Brands';
-		}
-
-		.icon:before {
-			line-height: inherit;
-		}
-
-		.icon > .label {
-			display: none;
-		}
-
-/* Nav */
-
-	#nav {
-		text-align: center;
-		height: 4.25em;
-		cursor: default;
-	}
-
-		#nav a {
-			position: relative;
-			display: inline-block;
-			color: #ffffff;
-			width: 1em;
-			height: 1em;
-			line-height: 0.9em;
-			font-size: 2.5em;
-			margin: 0 0.25em 0 0.25em;
-			opacity: 0.35;
-			outline: 0;
-			-moz-transition: opacity .25s ease-in-out;
-			-webkit-transition: opacity .25s ease-in-out;
-			-ms-transition: opacity .25s ease-in-out;
-			transition: opacity .25s ease-in-out;
-		}
-
-			#nav a.icon:before {
-				padding-right: 0;
-			}
-
-			#nav a:before {
-				font-size: 0.8em;
-			}
-
-			#nav a:after {
-				content: '';
-				display: block;
-				position: absolute;
-				left: 50%;
-				bottom: -0.75em;
-				margin-left: -0.5em;
-				border-bottom: solid 0em #ffffff;
-				border-left: solid 0.5em transparent;
-				border-right: solid 0.5em transparent;
-				-moz-transition: border-bottom-width .25s ease-in-out;
-				-webkit-transition: border-bottom-width .25s ease-in-out;
-				-ms-transition: border-bottom-width .25s ease-in-out;
-				transition: border-bottom-width .25s ease-in-out;
-			}
-
-			#nav a span {
-				display: block;
-				position: absolute;
-				background: #222222;
-				color: #ffffff;
-				top: -2.75em;
-				font-size: 0.3em;
-				height: 2.25em;
-				line-height: 2.25em;
-				left: 50%;
-				opacity: 0;
-				-moz-transition: opacity .25s ease-in-out;
-				-webkit-transition: opacity .25s ease-in-out;
-				-ms-transition: opacity .25s ease-in-out;
-				transition: opacity .25s ease-in-out;
-				width: 5.5em;
-				margin-left: -2.75em;
-			}
-
-				#nav a span:after {
-					content: '';
-					display: block;
-					position: absolute;
-					bottom: -0.4em;
-					left: 50%;
-					margin-left: -0.6em;
-					border-top: solid 0.6em #222222;
-					border-left: solid 0.6em transparent;
-					border-right: solid 0.6em transparent;
-				}
-
-			#nav a:hover {
-				opacity: 1.0;
-			}
-
-				#nav a:hover span {
-					opacity: 1.0;
-				}
-
-			#nav a.active {
-				opacity: 1.0;
-			}
-
-				#nav a.active:after {
-					border-bottom-width: 0.5em;
-				}
-
-		@media screen and (max-width: 980px) {
-
-			#nav a span {
-				display: none;
-			}
-
-		}
-
-/* Wrapper */
-
+@media screen and (max-width: 1280px) {
 	#wrapper {
-		width: 45em;
-		margin: 0 auto;
-		min-height: 100vh;
-		max-width: 100%;
-		padding: 4em 0;
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: -ms-flex;
-		display: flex;
-		-moz-flex-direction: column;
-		-webkit-flex-direction: column;
-		-ms-flex-direction: column;
-		flex-direction: column;
-		-moz-align-items: center;
-		-webkit-align-items: center;
-		-ms-align-items: center;
-		align-items: center;
-		-moz-justify-content: center;
-		-webkit-justify-content: center;
-		-ms-justify-content: center;
-		justify-content: center;
-		-moz-transition: opacity 1s ease-in-out;
-		-webkit-transition: opacity 1s ease-in-out;
-		-ms-transition: opacity 1s ease-in-out;
-		transition: opacity 1s ease-in-out;
+		padding: 3em 0;
+		max-width: calc(100% - 6em);
 	}
+}
 
-		body.is-preload #wrapper {
-			opacity: 0;
-		}
+@media screen and (max-width: 980px) {
+	#wrapper {
+		padding: 1.5em 0;
+		max-width: calc(100% - 8em);
+	}
+}
 
-		@media screen and (max-width: 1280px) {
+@media screen and (max-width: 736px) {
+	#wrapper {
+		padding: 1em 0;
+		max-width: calc(100% - 2em);
+	}
+}
 
-			#wrapper {
-				padding: 3em 0;
-				max-width: calc(100% - 6em);
-			}
+@media screen and (max-width: 360px) {
+	#wrapper {
+		padding: 1em 0;
+		max-width: 100%;
+	}
+}
 
-		}
-
-		@media screen and (max-width: 980px) {
-
-			#wrapper {
-				padding: 1.5em 0;
-				max-width: calc(100% - 8em);
-			}
-
-		}
-
-		@media screen and (max-width: 736px) {
-
-			#wrapper {
-				padding: 1em 0;
-				max-width: calc(100% - 2em);
-			}
-
-		}
-
-		@media screen and (max-width: 360px) {
-
-			#wrapper {
-				padding: 1em 0;
-				max-width: 100%;
-			}
-
-		}
+/* 
+   Main Panel Area
+*/
 
 #main {
 	position: relative;
 	overflow: hidden;
 	width: 100%;
-
-	/* Removed timber background – now only uses site BG2 */
 	background: transparent;
-
 	padding: 20px;
 	color: #fff;
 	border-radius: 10px;
 	transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-
 #main > .panel {
-	-moz-transition: opacity 0.25s ease-in-out;
-	-webkit-transition: opacity 0.25s ease-in-out;
-	-ms-transition: opacity 0.25s ease-in-out;
-	transition: opacity 0.25s ease-in-out;
-	margin-bottom: 0;
 	position: relative;
-	padding: 3.5em 2.5em 2.5em 2.5em;
 	width: 100%;
+	margin-bottom: 0;
+	padding: 3.5em 2.5em 2.5em;
+	transition: opacity 0.25s ease-in-out;
 }
 
 #main > .panel.inactive {
@@ -1981,25 +1940,22 @@ input, select, textarea {
 
 @media screen and (max-width: 736px) {
 	#main > .panel {
-		padding: 2em 1.5em 1.5em 1.5em;
+		padding: 2em 1.5em 1.5em;
 	}
 }
 
-/* Intro panel */
+/* Section fade animation */
+.panel {
+	position: relative;
+	transition: all 0.3s ease;
+}
+
+/* Intro section */
 #main > .panel.intro {
 	padding: 0;
 	height: 20em;
-	display: -moz-flex;
-	display: -webkit-flex;
-	display: -ms-flex;
 	display: flex;
-	-moz-flex-direction: row;
-	-webkit-flex-direction: row;
-	-ms-flex-direction: row;
 	flex-direction: row;
-	-moz-align-items: center;
-	-webkit-align-items: center;
-	-ms-align-items: center;
 	align-items: center;
 }
 
@@ -2142,7 +2098,7 @@ input, select, textarea {
 		margin: 0.25em 0 0 0;
 	}
 }
-/* ===== Split Section Styling ===== */
+/*  Split Section Styling */
 .split-section {
   display: flex;
   align-items: stretch;
@@ -2183,7 +2139,7 @@ input, select, textarea {
   margin-bottom: 1rem;
 }
 
-/* image / quote half */
+/* image / image */
 .split-image {
   flex: 1 1 50%;
   position: relative;
@@ -2206,52 +2162,8 @@ input, select, textarea {
   }
 }
 
-/* Footer */
-#footer {
-	color: rgba(255, 255, 255, 0.45);
-	text-align: center;
-	padding: 2em 0 0 0;
-	font-size: 0.75em;
-}
 
-#footer a {
-	color: rgba(255, 255, 255, 0.65);
-	-moz-transition: color .25s ease-in-out;
-	-webkit-transition: color .25s ease-in-out;
-	-ms-transition: color .25s ease-in-out;
-	transition: color .25s ease-in-out;
-}
-
-#footer a:hover {
-	color: white;
-}
-
-#footer .copyright {
-	list-style: none;
-	padding-left: 0;
-}
-
-#footer .copyright li {
-	display: inline-block;
-	padding-left: 1em;
-	margin-left: 1em;
-	border-left: solid 1px rgba(255, 255, 255, 0.25);
-	line-height: 1;
-}
-
-#footer .copyright li:first-child {
-	padding-left: 0;
-	margin-left: 0;
-	border-left: 0;
-}
-
-@media screen and (max-width: 736px) {
-	#footer .copyright li {
-		padding-left: 0.5em;
-		margin-left: 0.5em;
-	}
-}
-/* === Resource Section Layout === */
+/*  Resource Section Layout  */
 .resource-section {
   display: flex;
   flex-wrap: nowrap;
@@ -2266,7 +2178,7 @@ input, select, textarea {
   flex-direction: row-reverse;
 }
 
-/* === Timber Text Panel === */
+/*  Timber Text Panel */
 .resource-text {
   flex: 1;
   padding: 2rem;
@@ -2292,7 +2204,7 @@ input, select, textarea {
   margin-left: 1.5rem;
 }
 
-/* === Image Panel === */
+/*  Image Panel  */
 .resource-images {
   flex: 1;
   display: flex;
@@ -2310,7 +2222,7 @@ input, select, textarea {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
-/* === Responsive Adjustments === */
+/* Responsive Adjustments */
 @media (max-width: 900px) {
   .resource-section,
   .resource-section.alt {
@@ -2321,7 +2233,7 @@ input, select, textarea {
     width: 90%;
   }
 }
-/* === Home Split Card Styling === */
+/* Home Split Card Styling  */
 
 #home {
   background: transparent; /* no timber background behind */
@@ -2421,4 +2333,510 @@ input, select, textarea {
   #home .home-text p {
     font-size: 1.2em;
   }
+}
+/* LIGHT MODE STYLES */
+body.light-mode {
+  /* Change main background to your light version */
+  background-image: url("images/overlay.png"), url("images/LBG.jpg");
+  background-repeat: repeat, no-repeat;
+  background-size: auto, cover;
+  background-position: top left, center center;
+  color: #000; /* default text color */
+}
+
+/* Text color in light mode */
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3,
+body.light-mode h4,
+body.light-mode h5,
+body.light-mode h6,
+body.light-mode p,
+body.light-mode label {
+  color: #000;
+}
+
+/* Change timber card texture to lighter oak swatch */
+body.light-mode .text-box,
+body.light-mode .resource-text,
+body.light-mode .home-text {
+  background-image: url("images/overlay.png"), url("images/TAS-OAK-SWATCH.png");
+  background-repeat: repeat, no-repeat;
+  background-size: auto, cover;
+  background-position: top left, center;
+  color: #000; /* text on lighter timber */
+}
+
+/* Home section text color on light timber */
+body.light-mode #home .home-text h1,
+body.light-mode #home .home-text p {
+  color: #000;
+}
+
+/* Contact page adjustments for readability */
+body.light-mode #contact input,
+body.light-mode #contact textarea {
+  background: rgba(0, 0, 0, 0.05);
+  color: #000;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+body.light-mode #contact input::placeholder,
+body.light-mode #contact textarea::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+body.light-mode #contact button {
+  background: rgba(0, 0, 0, 0.1);
+  color: #000;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+body.light-mode #contact button:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+/*ICON COLORS IN LIGHT MODE */
+
+/* Main navigation icons */
+body.light-mode #nav a {
+  color: #000;
+  opacity: 0.7;
+}
+
+body.light-mode #nav a:hover,
+body.light-mode #nav a.active {
+  color: #000;
+  opacity: 1;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Font icons anywhere else (e.g. arrows, contact, etc.) */
+body.light-mode .icon,
+body.light-mode .icon:before,
+body.light-mode i,
+body.light-mode svg {
+  color: #000 !important;
+  fill: #000 !important;
+}
+
+/* Arrow button on home page */
+body.light-mode #home .home-image .arrow {
+  background: rgba(0, 0, 0, 0.15);
+  color: #000;
+}
+
+body.light-mode #home .home-image .arrow:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Contact page submit icon/button */
+body.light-mode #contact button .icon {
+  color: #000;
+}
+/* Light Mode: Home Page Timber Texture */
+body.light-mode #home .home-text {
+  background-image: url("images/overlay.png"), url("images/TAS-OAK-SWATCH.png");
+  background-repeat: repeat, no-repeat;
+  background-size: auto, cover;
+  background-position: top left, center;
+  color: #000;
+}
+
+.resource-images img,
+.split-image img,
+.home-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0 12px 12px 0;
+}
+#my-work .resource-images img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#my-work .resource-images img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+}
+/*MY WORK GALLERY CARD */
+#my-work .gallery-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("images/overlay.png"), url("images/R.jpg");
+  background-repeat: repeat, no-repeat;
+  background-size: auto, cover;
+  background-position: center;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  padding: 2.5rem;
+  color: #fff;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Header text inside timber card */
+#my-work .gallery-text {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#my-work .gallery-text h2 {
+  font-size: 2.2em;
+  margin-bottom: 0.4em;
+  color: #fff;
+}
+
+#my-work .gallery-text p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.05em;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+/* Responsive Even Grid of Images */
+#my-work .gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  justify-items: center;
+}
+
+/* Image tiles */
+#my-work .gallery-grid a {
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#my-work .gallery-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+#my-work .gallery-grid a:hover {
+  transform: scale(1.04);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+}
+
+/* === Light Mode Adjustments === */
+body.light-mode #my-work .gallery-card {
+  background-image: url("images/overlay.png"), url("images/TAS-OAK-SWATCH.png");
+  color: #000;
+}
+
+body.light-mode #my-work .gallery-text h2,
+body.light-mode #my-work .gallery-text p {
+  color: #000;
+}
+/* === MY WORK GALLERY CARDS === */
+#my-work {
+  background: transparent;
+  padding: 0;
+}
+
+/* Shared timber-styled card container */
+#my-work .gallery-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("images/overlay.png"), url("images/R.jpg");
+  background-repeat: repeat, no-repeat;
+  background-size: auto, cover;
+  background-position: center;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  padding: 2.5rem;
+  color: #fff;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Add clear space between cards */
+#my-work .gallery-card + .gallery-card {
+  margin-top: 3.5rem;  /* space between the two grids */
+}
+
+/* Card text header */
+#my-work .gallery-text {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#my-work .gallery-text h2 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  color: #fff;
+}
+
+#my-work .gallery-text p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.05em;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+/* === Grid Layout (3 columns x 2 rows) === */
+#my-work .gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  width: 100%;
+  justify-items: center;
+}
+
+/* Each image box */
+#my-work .gallery-grid a {
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#my-work .gallery-grid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+#my-work .gallery-grid a:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.6);
+}
+
+/* === Light Mode Adjustments === */
+body.light-mode #my-work .gallery-card {
+  background-image: url("images/overlay.png"), url("images/TAS-OAK-SWATCH.png");
+  color: #000;
+}
+
+body.light-mode #my-work .gallery-text h2,
+body.light-mode #my-work .gallery-text p {
+  color: #000;
+}
+
+/* Responsive grid */
+@media (max-width: 900px) {
+  #my-work .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  #my-work .gallery-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  #my-work .gallery-grid img {
+    height: 180px;
+  }
+}
+/* === LINK STYLING (Bold Black Links) === */
+a {
+  color: #000; /* solid black links */
+  font-weight: 700; /* make links bold */
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+  color: #333; /* subtle dark grey on hover */
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+  text-decoration: underline;
+}
+
+/* Light mode consistency */
+body.light-mode a {
+  color: #000;
+  font-weight: 700;
+}
+
+body.light-mode a:hover {
+  color: #333;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+  text-decoration: underline;
+}
+/* === Light/Dark Mode Toggle === */
+#footer {
+  position: relative;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  padding: 2.5em 0;
+  font-size: 0.9em;
+}
+
+/* Button styling */
+#footer #modeToggle {
+  margin-top: 1.2em;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6em 1.5em;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover effect */
+#footer #modeToggle:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.05);
+}
+
+/* Light mode style */
+body.light-mode #footer #modeToggle {
+  background: rgba(255, 255, 255, 0.9);
+  color: #000;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+body.light-mode #footer #modeToggle:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* === Graduation Countdown Styling === */
+#countdown {
+  margin-top: 1.5rem;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 1.2s ease-in;
+}
+
+#countdown h3 {
+  color: #fff;
+  font-size: 1.4rem;
+  margin-bottom: 0.3rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#countdown p {
+  color: #ffcc66;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+/* Light mode version */
+body.light-mode #countdown {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+body.light-mode #countdown h3 {
+  color: #000;
+}
+
+body.light-mode #countdown p {
+  color: #cc6600;
+}
+
+/* Smooth fade-in effect */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* Contact Section - Override Text Color */
+#contact {
+	color: #000000;
+}
+
+#contact h1,
+#contact h2,
+#contact h3,
+#contact h4,
+#contact h5,
+#contact h6,
+#contact p,
+#contact label,
+#contact input,
+#contact textarea {
+	color: #000000;
+}
+#modeToggle {
+	position: fixed;
+	top: 1em;
+	right: 1em;
+	z-index: 1000;
+}
+/* Footer Base Styles */
+#footer {
+  text-align: center;
+  padding: 2em 0 0 0;
+  font-size: 0.75em;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* Footer Links */
+#footer a {
+  color: rgba(255, 255, 255, 0.75);
+  transition: color 0.25s ease-in-out;
+}
+
+#footer a:hover {
+  color: #fff;
+}
+
+/* Copyright List */
+#footer .copyright {
+  list-style: none;
+  padding-left: 0;
+}
+
+#footer .copyright li {
+  display: inline-block;
+  padding-left: 1em;
+  margin-left: 1em;
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+  line-height: 1;
+}
+
+#footer .copyright li:first-child {
+  padding-left: 0;
+  margin-left: 0;
+  border-left: 0;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 736px) {
+  #footer .copyright li {
+    padding-left: 0.5em;
+    margin-left: 0.5em;
+  }
+}
+
+/* Light Mode Overrides */
+body.light-mode #footer {
+  color: #000;
+}
+
+body.light-mode #footer a {
+  color: #000;
+  font-weight: 600;
+}
+
+body.light-mode #footer a:hover {
+  color: #444;
+}
+
+body.light-mode #footer .copyright li {
+  border-left: 1px solid rgba(0, 0, 0, 0.25);
 }
